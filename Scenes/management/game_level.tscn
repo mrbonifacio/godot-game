@@ -1,0 +1,268 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://Scenes/player/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Main/Tiles/Tile-10.png" type="Texture" id=2]
+[ext_resource path="res://Main/Tiles/Tile-08.png" type="Texture" id=3]
+[ext_resource path="res://Main/Tiles/Tile-09.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/management/Background.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Main/Objects/Obj-Axe-Wood.png" type="Texture" id=6]
+[ext_resource path="res://Main/Objects/Obj-Barrel.png" type="Texture" id=7]
+[ext_resource path="res://Main/Misc/House-02.png" type="Texture" id=8]
+[ext_resource path="res://Main/Misc/House-01.png" type="Texture" id=9]
+[ext_resource path="res://Main/Misc/Grass-Purple-Foreground.png" type="Texture" id=10]
+[ext_resource path="res://Main/Misc/House-Background-01.png" type="Texture" id=11]
+[ext_resource path="res://Main/Misc/Grass-Green-Foreground.png" type="Texture" id=12]
+[ext_resource path="res://Scenes/npc/puppy.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/npc/vilage_lady.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/management/iInterface.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/enemy/enemy.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Music/Music/Retro Beat.ogg" type="AudioStream" id=17]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 0, 24, 0, 24, 24, 0, 24 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 0, 0, 24, 0, 24, 24, 0, 24 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 0, 0, 24, 0, 24, 24, 0, 24 )
+
+[sub_resource type="TileSet" id=4]
+0/name = "left_tile"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 24, 24 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "right_tile"
+1/texture = ExtResource( 4 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 24, 24 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 2 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "middle_tile"
+2/texture = ExtResource( 2 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 24, 24 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 3 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PoolVector2Array( 0, 6, 0, 4, 6, 4, 6, 3, 12, 3, 12, 4, 14, 4, 14, 6, 12, 6, 12, 10, 15, 10, 15, 15, 15, 16, 5, 16, 5, 10, 6, 10, 6, 6 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 3, 6, 14, 6, 14, 16, 3, 16 )
+
+[sub_resource type="TileSet" id=7]
+0/name = "axe_wood"
+0/texture = ExtResource( 6 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 16, 16 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 8 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "Obj-Barrel.png 1"
+1/texture = ExtResource( 7 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 16, 16 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 6 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "grass_green_foregroun"
+2/texture = ExtResource( 12 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 16, 32, 16 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "grass-purple-foreground"
+3/texture = ExtResource( 10 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 16, 32, 16 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "House-Background-01.png 4"
+4/texture = ExtResource( 11 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 64, 80 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "House-02.png 5"
+5/texture = ExtResource( 8 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 0, 0, 80, 64 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "House-01.png 6"
+6/texture = ExtResource( 9 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 0, 80, 80 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+
+[node name="GameLevel" type="Node2D"]
+position = Vector2( 0, 5 )
+
+[node name="Map" type="Node2D" parent="."]
+
+[node name="Terrain" type="TileMap" parent="Map"]
+tile_set = SubResource( 4 )
+cell_size = Vector2( 24, 24 )
+format = 1
+tile_data = PoolIntArray( 458752, 0, 0, 458753, 2, 0, 458754, 2, 0, 458755, 2, 0, 458756, 2, 0, 458757, 2, 0, 458758, 2, 0, 458759, 2, 0, 458760, 2, 0, 458761, 2, 0, 458762, 2, 0, 458763, 2, 0, 458764, 2, 0, 458765, 2, 0, 458766, 2, 0, 458767, 2, 0, 458768, 2, 0, 458769, 2, 0, 458770, 2, 0, 458771, 2, 0, 458772, 2, 0, 458773, 2, 0, 458774, 2, 0, 458775, 2, 0, 458776, 2, 0, 458777, 2, 0, 458778, 2, 0, 458779, 2, 0, 458780, 2, 0, 458781, 2, 0, 458782, 2, 0, 458783, 2, 0, 458784, 2, 0, 458785, 2, 0, 458786, 2, 0, 458787, 2, 0, 458788, 2, 0, 458789, 2, 0, 458790, 2, 0, 458791, 2, 0, 458792, 2, 0, 458793, 2, 0, 458794, 1, 0 )
+
+[node name="Decoration" type="TileMap" parent="Map"]
+position = Vector2( 0, -8.096 )
+tile_set = SubResource( 7 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 393226, 6, 0, 393237, 4, 0, 458752, 5, 0, 655370, 1, 0, 655380, 0, 0 )
+
+[node name="Npc" type="Node2D" parent="."]
+
+[node name="Puppy" parent="Npc" instance=ExtResource( 13 )]
+position = Vector2( 86, 156 )
+
+[node name="VilageLady" parent="Npc" instance=ExtResource( 14 )]
+unique_name_in_owner = true
+position = Vector2( 308, 156 )
+dialog_text = [ "Caro viajante, precisamos de ajuda!", "", "Nossa vila está sendo atacada por Lamacrânios!" ]
+special_text = [ "Obrigado, você e nosso herói!" ]
+
+[node name="Enemy" type="Node2D" parent="."]
+
+[node name="Enemy" parent="Enemy" instance=ExtResource( 16 )]
+position = Vector2( 654, 152 )
+
+[node name="Enemy2" parent="Enemy" instance=ExtResource( 16 )]
+position = Vector2( 701, 152 )
+
+[node name="Enemy3" parent="Enemy" instance=ExtResource( 16 )]
+position = Vector2( 745, 152 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 27, 156 )
+rotation = 0.00317615
+move_speed = 90
+jump_speed = 150
+
+[node name="Background" parent="." instance=ExtResource( 5 )]
+
+[node name="Interface" parent="." instance=ExtResource( 15 )]
+
+[node name="bgMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 17 )
+volume_db = -15.0
+autoplay = true
