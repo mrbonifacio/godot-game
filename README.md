@@ -30,7 +30,7 @@ Esses são os controles básicos para navegar e interagir no mundo do jogo. Cert
 
 Antes de executar o jogo, é necessário assistir ao vídeo de apresentação da plataforma e do funcionamento do game. Para isso, acesse o link abaixo:
 
-[Link do Vídeo de Apresentação]([https://youtu.be/MBp_G8ihZ7M])
+[Link do Vídeo de Apresentação](https://youtu.be/MBp_G8ihZ7M)
 
 Após assistir ao vídeo, faça o download do jogo e execute-o. Divirta-se!
 
