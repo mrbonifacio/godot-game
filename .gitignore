@@ -1,3 +1,10 @@
-static\Firebase.gd
+# Arquivos e diretórios a serem ignorados pelo Git
+
+# Ignorar o arquivo Firebase.gd dentro do diretório static
+static/Firebase.gd
+
+# Ignorar arquivos de importação
 .import
-Main
+
+# Ignorar o diretório Main
+Main/
